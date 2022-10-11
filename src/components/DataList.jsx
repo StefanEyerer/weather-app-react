@@ -1,7 +1,9 @@
 import DataItem from "./DataItem";
 
-function DataList({ datapoints }) {
-  const handleReset = () => {};
+function DataList({ datapoints, onReset }) {
+  const handleReset = () => {
+    onReset();
+  };
 
   return (
     <section>

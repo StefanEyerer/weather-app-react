@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-function Search() {
+function Search({ onSubmit }) {
   const [location, setLocation] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    onSubmit(location);
     setLocation("");
   };
 
